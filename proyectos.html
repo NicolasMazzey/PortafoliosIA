@@ -6,6 +6,18 @@
     <meta name="description" content="Proyectos de Nicolas Mazzey">
     <title>Proyectos de Nicolas Mazzey</title>
     <link rel="stylesheet" href="proyectos.css">
+
+    <script>
+        function downloadFile() {
+            const link = document.createElement('a');
+            link.href = 'archivo.txt';
+            link.download = 'archivo.txt';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
 </head>
 <body>
 
@@ -19,9 +31,13 @@
     <a href="proyectos.html">Proyectos</a>
 </nav>
 
-<section>
+<section> <!-- Poner repos o zips de rapid miner para descargar y poder levantar en otra computadora que tenga rapid miner-->
     <h2>Proyecto 1: Aplicación web de banca digital</h2>
     <p>Detalles del proyecto...</p>
+
+    <a href="archivo.txt" download="nuevo_nombre.txt">Descargar</a>
+
+    <button onclick="downloadFile()">Descargar index.html</button>
 
     <h2>Proyecto 2: Sistema de recomendación utilizando Machine Learning</h2>
     <p>Detalles del proyecto...</p>
