@@ -21,67 +21,88 @@
     <a href="proyectos.html">Proyectos</a>
 </nav>
 
-<section id="about">
-    <h2>Introduccion</h2>
-    <p>Soy Nicolas Mazzey, estudiante de ingeniería en computación de la Universidad Católica en este portafolio van a encontrar 
-        información acerca de mis conocimientos,tecnologías y proyectos de Machine Learning desarrollados a lo largo del curso de 
-        Introducción a los métodos de aprendizaje automático de la Universidad Católica del Uruguay.</p>
-</section>
-
 <section>
-    <h2>Conocimientos de Machine Learning</h2>
-    <p>Conocimientos hasta el momento...</p>
-    <!-- Hablar de algoritmos lineales-->
+    <h2>Introducción</h2>
+    <p>Soy Nicolas Mazzey, estudiante de ingeniería en computación de la Universidad Católica. En este portafolio encontrarás información acerca de mis conocimientos, tecnologías, y proyectos de Machine Learning desarrollados a lo largo del curso de Introducción a los métodos de aprendizaje automático de la Universidad Católica del Uruguay.</p>
 </section>
 
 <section>
     <h2>Proceso de Machine Learning</h2>
-    <p>Variable objetivo</p>
-    <p>Cross Validation</p>
-    <p>Error de test vs error de entrenamiento</p>
+    <p>El proceso de Machine Learning involucra varias fases importantes para construir modelos predictivos eficaces:</p>
+    <ul>
+        <li><b>Variable Objetivo:</b> Es la variable que intentamos predecir o clasificar en un problema de Machine Learning. La identificación precisa de la variable objetivo es esencial para definir el problema correctamente.</li>
+        <li><b>Cross Validation:</b> Técnica de validación que divide el conjunto de datos en varias particiones, utilizando algunas para entrenar y otras para validar el modelo, asegurando que el rendimiento del modelo sea consistente en diferentes subconjuntos de datos.</li>
+        <li><b>Error de Test vs Error de Entrenamiento:</b> El error de entrenamiento mide cómo de bien el modelo se ajusta a los datos de entrenamiento, mientras que el error de test evalúa su rendimiento en datos no vistos, lo que permite detectar sobreajuste o subajuste.</li>
+    </ul>
 </section>
 
 <section>
-    <h2>Tares de Preparacion de Datos</h2>
-    <p>Separar data para entrenamiento y test</p>
-    <p>Analisis de distribuciones</p>
-    <p>Outliers</p>
-    <p>Valores faltantes</p>
-    <p>Normalizacion de Caracteristicas</p>
+    <h2>Tareas de Preparación de Datos</h2>
+    <p>La preparación de los datos es uno de los pasos más importantes en Machine Learning. Entre las tareas que realizo están:</p>
+    <ul>
+        <li><b>Separación de datos para entrenamiento y test:</b> Los datos se dividen en conjuntos de entrenamiento y test para evaluar la generalización del modelo.</li>
+        <li><b>Análisis de Distribuciones:</b> Evalúa cómo se distribuyen las variables para detectar posibles sesgos o patrones útiles para el modelado.</li>
+        <li><b>Detección y manejo de <i>Outliers</i>:</b> Los valores atípicos pueden influir negativamente en los modelos, por lo que se analizan y manejan adecuadamente.</li>
+        <li><b>Imputación de valores faltantes:</b> Se reemplazan o imputan los datos faltantes utilizando técnicas como la media, mediana o modelos más avanzados como KNN Imputation.</li>
+        <li><b>Normalización de características:</b> Es el proceso de escalar los datos a un rango estándar, necesario para algoritmos que dependen de la magnitud de las características, como SVM o KNN.</li>
+    </ul>
 </section>
 
 <section>
-    <h2>Algoritmos lineales</h2>
-    <p>Descenso de Gradiente</p>
-    <p>Regresion lineal</p>
-    <p>Regresion logica</p>
-    <p>Analisis Discriminante Lineal</p>
+    <h2>Algoritmos Lineales</h2>
+    <p>En Machine Learning, los algoritmos lineales son fundamentales para modelar relaciones entre variables. Entre los que he utilizado están:</p>
+    <ul>
+        <li><b>Descenso de Gradiente:</b> Método iterativo de optimización para encontrar los valores de los parámetros que minimizan una función de coste. Se utiliza comúnmente en regresión lineal y redes neuronales.</li>
+        <li><b>Regresión Lineal:</b> Técnica utilizada para predecir una variable continua en función de una o más variables independientes. Busca ajustar una línea que minimice el error cuadrático medio.</li>
+        <li><b>Regresión Logística:</b> Modelo estadístico utilizado para problemas de clasificación binaria, que estima la probabilidad de que un evento ocurra (como sí/no, 1/0).</li>
+        <li><b>Análisis Discriminante Lineal (LDA):</b> Técnica supervisada utilizada para clasificación que proyecta los datos en un espacio de menor dimensionalidad maximizando la separación entre clases.</li>
+    </ul>
 </section>
 
 <section>
     <h2>Naive Bayes</h2>
-    <p>El algoritmo de Naive Bayes es un método de clasificación basado en el teorema de Bayes, que asume que las características son independientes entre sí dadas las clases.</p>
-    <p>Naive Bayes se utiliza para clasificar datos en diferentes categorías basándose en la probabilidad de que un nuevo dato pertenezca a cada clase.</p>
-    <!-- imagen de la formula-->
-    <h4>Condiciones de uso:</h4>
+    <p>El algoritmo de Naive Bayes es un clasificador probabilístico basado en el teorema de Bayes. Asume que todas las características son independientes entre sí dado el valor de la clase objetivo, lo que simplifica enormemente el cálculo de probabilidades.</p>
+    <h4>Principales Ventajas:</h4>
     <ul>
-        <li>Las características son independientes entre si</li>
-        <li>Las características siguen una distribucion Normal</li>
-        <li>Suficiencia de datos para poder entrenar el modelo</li>
+        <li>Es eficiente y rápido, especialmente útil con conjuntos de datos grandes.</li>
+        <li>Funciona bien incluso con un número limitado de datos de entrenamiento.</li>
+        <li>Requiere menos datos de entrenamiento en comparación con otros clasificadores.</li>
     </ul>
-    <h4>Aplicaciones de Naibe Bayes</h4>
+    <h4>Condiciones de Uso:</h4>
+    <ul>
+        <li>Asume que las características son independientes entre sí.</li>
+        <li>Funciona mejor cuando las características siguen una distribución normal.</li>
+        <li>Necesita suficientes datos para estimar correctamente las probabilidades.</li>
+    </ul>
+    <h4>Aplicaciones:</h4>
+    <p>Se utiliza en aplicaciones como la clasificación de correos electrónicos (spam/no spam), el análisis de sentimientos, y la categorización de textos.</p>
 </section>
 
 <section>
     <h2>K Vecinos más Cercanos (KNN)</h2>
-    <p>Conocimientos hasta el momento...</p>
+    <p>El algoritmo K-Nearest Neighbors (KNN) es un método de clasificación basado en la proximidad de los datos. Para predecir la clase de un nuevo dato, el algoritmo busca los <i>k</i> ejemplos más cercanos en el espacio de características y asigna la clase más frecuente entre ellos.</p>
+    <h4>Ventajas:</h4>
+    <ul>
+        <li>No hace ninguna suposición sobre la distribución de los datos.</li>
+        <li>Es sencillo de entender e implementar.</li>
+    </ul>
+    <h4>Desventajas:</h4>
+    <ul>
+        <li>El rendimiento puede verse afectado por el ruido en los datos.</li>
+        <li>Requiere un alto coste computacional, ya que se calcula la distancia de cada nuevo dato con todos los datos de entrenamiento.</li>
+    </ul>
+    <h4>Aplicaciones:</h4>
+    <p>Utilizado en problemas de clasificación, como el reconocimiento de patrones y la clasificación de imágenes.</p>
 </section>
 
 <section>
-    <h2>Selección de Caracteristicas</h2>
-    <p>Selección hacia adelante</p>
-    <p>Selección hacia atrás</p>
-    <p>Algoritmo Genético</p>
+    <h2>Selección de Características</h2>
+    <p>La selección de características es un paso clave en Machine Learning, ya que permite reducir la dimensionalidad del conjunto de datos, mejorando la eficiencia y el rendimiento de los modelos. Los métodos principales incluyen:</p>
+    <ul>
+        <li><b>Selección Hacia Adelante:</b> Empieza con un conjunto vacío de características y va añadiendo una a una las que mejoran el rendimiento del modelo.</li>
+        <li><b>Selección Hacia Atrás:</b> Comienza con todas las características y va eliminando aquellas que menos contribuyen al rendimiento.</li>
+        <li><b>Algoritmo Genético:</b> Método basado en la selección natural, donde las mejores combinaciones de características "sobreviven" y se cruzan para crear nuevas soluciones.</li>
+    </ul>
 </section>
 
 <footer>
