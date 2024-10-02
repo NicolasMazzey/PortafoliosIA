@@ -28,24 +28,29 @@
 
 <section>
     <h2>Proceso de Machine Learning</h2>
-    <p>El proceso de Machine Learning involucra varias fases importantes para construir modelos predictivos eficaces:</p>
-    <ul>
-        <li><b>Variable Objetivo:</b> Es la variable que intentamos predecir o clasificar en un problema de Machine Learning. La identificación precisa de la variable objetivo es esencial para definir el problema correctamente.</li>
-        <li><b>Cross Validation:</b> Técnica de validación que divide el conjunto de datos en varias particiones, utilizando algunas para entrenar y otras para validar el modelo, asegurando que el rendimiento del modelo sea consistente en diferentes subconjuntos de datos.</li>
-        <li><b>Error de Test vs Error de Entrenamiento:</b> El error de entrenamiento mide cómo de bien el modelo se ajusta a los datos de entrenamiento, mientras que el error de test evalúa su rendimiento en datos no vistos, lo que permite detectar sobreajuste o subajuste.</li>
-    </ul>
+    <p>El proceso de Machine Learning involucra varias factores para construir modelos predictivos eficaces:</p>
+
+    <p><b>Datos de uno o mas datasets:</b> Sin datos los modelos de Machine Learning no se pueden entrenar ni usar. Para ello hacen faltan una cantidad significativa de datos y sobretodo datos que representen adecuadamente la realidad del problema.</p>
+    <p>Si un modelo se entrena con datos que no representen la realidad entonces el modelo va predecir de manera incorrecta y generar perdidas a los que confien en el modelo.</p>
+
+    <p><b>Algoritmo de Machine Learning:</b> Es el corazon del proceso de Machine Learning, este algoritmo va a ser el que vamos a entrenar con datos para que pueda clasificar o predecir la variable objetivo en funcion de las caracteristicas del dataset.</p>
+    <p>Hay muchisimos algoritmos que pueden funcionar para una situacion dada pero una correcta eleccion marca la diferencia entre un modelo eficaz y otro deficiente.</p>
+
+    <p><b>Error de Test vs Error de Entrenamiento:</b> Cuando se entrena un algoritmo de machine learning nunca hay que usar la misma data con la que se entreno para realizar los test ya que esto ocaciona que el algoritmo tenga siempre un 100% de efectivad y no represente correctamente la realidad donde los datos no van a ser siempre los mismos.</p>
+    <p>Para evitar este error lo que se debe hacer es tener un dataset de entrenamiento y un dataset de test, en caso de tener solo un dataset para ambos se puede fraccionar en 2 dataset con un particion 70% para entrenamiento y 30% para test. </p>
+
+    <p><b>Variable Objetivo:</b> En los problemas de Machine Learning lo mas importante es ubicar que parametro del dataset estamos tratando de predecir o clasificar en un problema. 
+        Sin esta variable objetivo no hay punto en aplicar un algoritmo de machine Learnning ya que es el objetivos de estos algoritmos y los problemas de Machine Learning en general.</p>
+    <p>Por ejemplo si tenemos un dataset de personas cancer de pulmon la variable objetivo a predecir es si la persona tiene cancer del pulmon o no en funcion a sus caracteristicas.</p>
 </section>
 
 <section>
     <h2>Tareas de Preparación de Datos</h2>
     <p>La preparación de los datos es uno de los pasos más importantes en Machine Learning. Entre las tareas que realizo están:</p>
-    <ul>
-        <li><b>Separación de datos para entrenamiento y test:</b> Los datos se dividen en conjuntos de entrenamiento y test para evaluar la generalización del modelo.</li>
-        <li><b>Análisis de Distribuciones:</b> Evalúa cómo se distribuyen las variables para detectar posibles sesgos o patrones útiles para el modelado.</li>
-        <li><b>Detección y manejo de <i>Outliers</i>:</b> Los valores atípicos pueden influir negativamente en los modelos, por lo que se analizan y manejan adecuadamente.</li>
-        <li><b>Imputación de valores faltantes:</b> Se reemplazan o imputan los datos faltantes utilizando técnicas como la media, mediana o modelos más avanzados como KNN Imputation.</li>
-        <li><b>Normalización de características:</b> Es el proceso de escalar los datos a un rango estándar, necesario para algoritmos que dependen de la magnitud de las características, como SVM o KNN.</li>
-    </ul>
+    <p><b>Análisis de Distribuciones:</b> En la preparacion de datos es importante ver que distribuciones tiene cada caracteristica debido a que hay algoritmos que asumen que las caracteristicas se comportan de cierta manera por ejemplo que sigan un distribucion gaussiana para usar naive bayes.</p>
+    <p><b>Detección y manejo de <i>Outliers</i>:</b> Es relevante quitar los outliers porque si son muy atipicos pueden afectar el rendimiento del modelo ya que son valores muy inusuales y que no deberian de ser considerados en la realidad.</p>
+    <p><b>Imputación de valores faltantes:</b> Los valores faltantes afectan negativamente al modelo ya que son tuplas que no aportan informacion para la caracteristica y aumentan el costo computacional es mejor removerlos o remplazarlos para mejorar el modelo.</p>
+    <p><b>Normalización de características:</b> Es el proceso de escalar los datos a un rango estándar, necesario para algoritmos que dependen de la magnitud de las características, como KNN.</p>
 </section>
 
 <section>
@@ -57,6 +62,13 @@
         <li><b>Regresión Logística:</b> Modelo estadístico utilizado para problemas de clasificación binaria, que estima la probabilidad de que un evento ocurra (como sí/no, 1/0).</li>
         <li><b>Análisis Discriminante Lineal (LDA):</b> Técnica supervisada utilizada para clasificación que proyecta los datos en un espacio de menor dimensionalidad maximizando la separación entre clases.</li>
     </ul>
+    <h4>Principales Ventajas:</h4>
+    <ul>
+        <li>Simplicidad: Los modelos lineales son matemáticamente simples, lo que los hace fáciles de entender e interpretar.</li>
+        <li>Velocidad: Son muy rápidos en términos de entrenamiento y predicción, lo cual es ideal para trabajar con grandes conjuntos de datos.</li>
+        <li>Interpretabilidad: Los algoritmos lineales son altamente interpretables, lo cual permite entender mejor los pesos que tiene cada caracteristica permitiendo mejorar el modelo con facilidad.</li>
+    </ul>
+    <h4>Aplicaciones:</h4>
 </section>
 
 <section>
@@ -103,6 +115,7 @@
         <li><b>Selección Hacia Atrás:</b> Comienza con todas las características y va eliminando aquellas que menos contribuyen al rendimiento.</li>
         <li><b>Algoritmo Genético:</b> Método basado en la selección natural, donde las mejores combinaciones de características "sobreviven" y se cruzan para crear nuevas soluciones.</li>
     </ul>
+    <h4>Aplicaciones:</h4>
 </section>
 
 <footer>
