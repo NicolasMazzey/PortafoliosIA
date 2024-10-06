@@ -20,38 +20,77 @@
     <a href="tecnologias.html">Tecnologías</a>
 </nav>
 
-<section>
+<section id="proyecto_Regresión_Logistica">
     <h2>Modelo de Regresión Logistica para predecir un 2do ataque cardiaco</h2>
     <p>La idea de este projecto es generar un modelo de Machine Learning para predecir si una persona va a tener un segundo ataque cardiaco en base a estudios realizados en el dataset.</p>
+    <p>Usamos Regresion Logistica debido a que la variable objetivo "tener un 2do ataque cardiaco" es binaria Si/No</p>
     <h4>Regesion Logistica en RapidMiner</h4>
     <p>Si seguimos el modelo de izquierda a derecha empezamos por la carga de datos en base al dataset provisto con el operado Retrieve renombrado a Dataset estudios C.</p>
     <p>Seguido de eso usamos el operado "Split Data" para generar las particiones de entrenamiento 70% y Test 30% fundamentales para que el modelo represente la realidad adecuadamente.</p>
     <p>Luego usamos el operador de "Logistic Regresion" a modo de caja negra y le ingresamos la particion de entrenamiento y junto al operador "Apply Model" con la particion de test probamos el modelo.</p>
     <p>Finalmente multiplicamos la salida con el operador "Multiply" y mandamos el resultado del modelo al operador "Performance" para ver su precision. El otro hilo lo mandamos hacia la salida result junto con los resultados de performance y ejecutamos el modelo.</p>
-    <img src="imagenes/RL_RM.png" width= 900px height= auto style="display: block;">
+    <img src="imagenes/proyecto_RL/RL_RM.png" width= 900px height= auto style="display: block;">
     <h4>Resultados prediccion del modelo en RapidMiner</h4>
     <p>Podemos ver en en la 2da columna se encuentra el valor de prediccion correcto y en la 3ra se encuentra la prediccion del modelo. A su vez vemos que la prediccion depende de los coeficientes de Si 4ta columna y coeficiente de NO 5ta columna todo calculado a partir de los pesos de cada caracteristica de las columnas restantes.</p>
-    <img src="imagenes/RL_Res.png" width= 900px height= auto style="display: block;">
+    <img src="imagenes/proyecto_RL/RL_Res.png" width= 900px height= auto style="display: block;">
     <h4>Resultados de precision del modelo en RapidMiner</h4>
     <p>Podemos ver que la precision de este modelo es de 92.68% lo cual es bastante bueno pero no es Perfecto. A su vez vemos que en dentro de los errores hay 2 falsos SI y 1 falso NO segun la matriz de confusion.</p>
-    <img src="imagenes/RL_Pr.png" width= 900px height= auto style="display: block;">
+    <img src="imagenes/proyecto_RL/RL_PF.png" width= 900px height= auto style="display: block;">
     <h4>Replica del modelo en Python</h4>
     <a href="https://colab.research.google.com/drive/1bvpMBX4tPGC7eJ-4XPLv9X35olDVBBX4?usp=sharing">Colab de Regresion Logistica en Python</a>
+    <button onclick="window.location.href='index.html#AlgoritmosLineales';" style="display: block; margin-top: 1rem;">Section de Algoritmos Lineales</button>
 </section>
 
-<section>
-    <h2>Proyecto Naibe Bayes</h2>
-    <p>descripcion</p>
+<section id="proyecto_Naibe_Bayes">
+    <h2>Proyecto de Naibe Bayes para predecir condiciones para jugar al Golf</h2>
+    <p>La idea de este proyecto es generar un modelo de machine learning para predecir en base a las condiciones climaticas del campo de golf si podemos practicar o no el deporte.</p>
+    <p>Si bien podriamos haber usado nuevamente Regresion Logisitica debemos usar Naibe Bayes debido al volumen limitado de datos de 14 tuplas.</p>
+    <h4>Modelo de Naibe Bayes en RapidMiner</h4>
+    <p>El modelo consiste de el dataset de entrenamiento "Golf", el dataset de test "Golf-TestSet", ambos son tratatos por el operador "Numerical to polinomial" que convierte las caracteristicas numericas en polinomiales.</p>
+    <p>Luego el dataset de entrenamiento se usa para entrenar la caja negra de "Naive Bayes" y se aplica el modelo en "Apply Model" con el dataset de test.</p>
+    <P>Por ultimo se mide la eficiencia con el operador Performance y presentamos los resultados hacia afuera.</P>
+    <img src="imagenes/pryecto_NB/NB_RM.png" width= 900px height= auto style="display: block;">
+    <h4>Resultados del modelo de Naibe Bayes en RapidMiner</h4>
+    <p>Podemos ver en en la 2da columna se encuentra el valor de prediccion correcto y en la 3ra se encuentra la prediccion del modelo. A su vez vemos que la prediccion depende de los coeficientes de Si 4ta columna y coeficiente de NO 5ta columna todo calculado a partir de los pesos de cada caracteristica de las columnas restantes.</p>
+    <img src="imagenes/pryecto_NB/NB_RS.png" width= 900px height= auto style="display: block;">
+    <h4>Performance del modelo de Naibe Bayes en RapidMiner</h4>
+    <p>En comparacion al proyecto de regresión lineal la precision es menor pero considerando la poca cantidad de datos es un buen resultado ya que el modelo no se desajusto.</p>
+    <img src="imagenes/pryecto_NB/NB_PF.png" width= 900px height= auto style="display: block;">
+    <h4>Performance del modelo de Naibe Bayes en RapidMiner sin convertir las variables numericas a polinomiales</h4>
+    <p>Al dejar las caracteristicas numericas sin convertirlas a polinomiales podemos ver que la precision decae drasticamente empeorando el modelo y reflejando la importancia de las tareas de preparacion de datos.</p>
+    <img src="imagenes/pryecto_NB/NB_PF2.png" width= 900px height= auto style="display: block;">
+    <button onclick="window.location.href='index.html#Naive_Bayes';" style="display: block; margin-top: 1rem;">Section de Naive Bayes</button>
 </section>
 
-<section>
+<section id="proyecto_KNN">
     <h2>Proyecto KNN</h2>
     <p>descripcion</p>
+    <button onclick="window.location.href='index.html#KNN';" style="display: block; margin-top: 1rem;">Section de KNN</button>
 </section>
 
-<section>
+<section id="proyecto_Seleccion_Característica">
     <h2>Proyecto Seleccion de Características</h2>
-    <p>comparación entre direntes metodos de Seleccion de caracteristicas en RapidMinner</p>
+    <p>En este proyecto queremos comparar diferentes metodos de seleccion de caracteristicas para ver los pros y cons de cada uno usando RapidMinner y un dataset con datos de un sonar para piedras y minerales.</p>
+    <h4>Modelo con 3 tipos de Seleccion de Características</h4>
+    <img src="imagenes/proyecto_SC/SC_RM.png" width= 900px height= auto style="display: block;">
+    <h4>Cross Validation adentro de cada Caja Negra de cada Seleccion</h4>
+    <img src="imagenes/proyecto_SC/SC_CV.png" width= 900px height= auto style="display: block;">
+    <h4>Modelo de Naive Bayes aplicado al dataset con cada tipo de Seleccion de caracteristicas adentro del Cross Validation</h4>
+    <img src="imagenes/proyecto_SC/NB_MD.png" width= 900px height= auto style="display: block;">
+    <h4>Performance de Forward Seleccion:</h4>
+    <p>Es el mas balanceado de los 3 no es el mas lento ni mas rapido pero tampoco es el mas preciso o impreciso</p>
+    <p>A su vez de los 60 atributos se quedo con tan solo 4</p>
+    <img src="imagenes/proyecto_SC/PF_FW.png" width= 900px height= auto style="display: block;">
+    <h4>Performance de Backwards Seleccion:</h4>
+    <p>Muy rapido de ejecutar pero fue el mas impreciso</p>
+    <p>A su vez de los 60 atributos tan solo descarto 8</p>
+    <img src="imagenes/proyecto_SC/PF_BW.png" width= 900px height= auto style="display: block;">
+    <h4>Performance de Seleccion con Algoritmo Genetico:</h4>
+    <p>Fue el mas lento de ejecutar de los 3 pero es el metodo mas preciso</p>
+    <p>A su vez de los 60 atributos se quedo con tan solo 9 mas que el Foward pero no exagero como el Backwards</p>
+    <img src="imagenes/proyecto_SC/PF_GN.png" width= 900px height= auto style="display: block;">
+    <p>En base a este proyecto podemos concluir que dependiendo de la cantidad de datos y la precision buscada debemos cambiar el algoritmo de seleccion de caracteristicas para mantener la eficiencia.</p>
+    <button onclick="window.location.href='index.html#SelecciónCaracterísticas';" style="display: block; margin-top: 1rem;">Section de Seleccion de Caracteristicas</button>
 </section>
 
 <footer>
