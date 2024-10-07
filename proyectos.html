@@ -49,22 +49,41 @@
     <p>El modelo consiste de el dataset de entrenamiento "Golf", el dataset de test "Golf-TestSet", ambos son tratatos por el operador "Numerical to polinomial" que convierte las caracteristicas numericas en polinomiales.</p>
     <p>Luego el dataset de entrenamiento se usa para entrenar la caja negra de "Naive Bayes" y se aplica el modelo en "Apply Model" con el dataset de test.</p>
     <P>Por ultimo se mide la eficiencia con el operador Performance y presentamos los resultados hacia afuera.</P>
-    <img src="imagenes/pryecto_NB/NB_RM.png" width= 900px height= auto style="display: block;">
+    <img src="imagenes/proyecto_NB/NB_RM.png" width= 900px height= auto style="display: block;">
     <h4>Resultados del modelo de Naibe Bayes en RapidMiner</h4>
     <p>Podemos ver en en la 2da columna se encuentra el valor de prediccion correcto y en la 3ra se encuentra la prediccion del modelo. A su vez vemos que la prediccion depende de los coeficientes de Si 4ta columna y coeficiente de NO 5ta columna todo calculado a partir de los pesos de cada caracteristica de las columnas restantes.</p>
-    <img src="imagenes/pryecto_NB/NB_RS.png" width= 900px height= auto style="display: block;">
+    <img src="imagenes/proyecto_NB/NB_RS.png" width= 900px height= auto style="display: block;">
     <h4>Performance del modelo de Naibe Bayes en RapidMiner</h4>
     <p>En comparacion al proyecto de regresión lineal la precision es menor pero considerando la poca cantidad de datos es un buen resultado ya que el modelo no se desajusto.</p>
-    <img src="imagenes/pryecto_NB/NB_PF.png" width= 900px height= auto style="display: block;">
+    <img src="imagenes/proyecto_NB/NB_PF.png" width= 900px height= auto style="display: block;">
     <h4>Performance del modelo de Naibe Bayes en RapidMiner sin convertir las variables numericas a polinomiales</h4>
     <p>Al dejar las caracteristicas numericas sin convertirlas a polinomiales podemos ver que la precision decae drasticamente empeorando el modelo y reflejando la importancia de las tareas de preparacion de datos.</p>
-    <img src="imagenes/pryecto_NB/NB_PF2.png" width= 900px height= auto style="display: block;">
+    <img src="imagenes/proyecto_NB/NB_PF2.png" width= 900px height= auto style="display: block;">
     <button onclick="window.location.href='index.html#Naive_Bayes';" style="display: block; margin-top: 1rem;">Section de Naive Bayes</button>
 </section>
 
 <section id="proyecto_KNN">
-    <h2>Proyecto KNN</h2>
-    <p>descripcion</p>
+    <h2>Proyecto de KNN para predecir deporte primario de un deportista</h2>
+    <p>La idea de este proyecto es aplicar el algortimo KNN para generar un modelo de machine learning.</p>
+    <p>La eleccion de knn se da para este modelo por la poca cantidad de datos, 447 tuplas y porque la variable objetivo es multivariable puediendo ser uno de 4 deportes posibles y necesitando calcular un coeficiente para cada una de estos deportes.</p>
+    <h4>Modelo de KNN en RapidMiner</h4>
+    <p>El modelo consiste del dataset sport que pasa por el operador "Filter Examples" para eliminar outliers incoerentes.</p>
+    <p>Luego se setea el rol de "label" a la caracteristica deporte primario para que sea la variable objetivo del dataset.</p>
+    <p>Finalmente se manda al operador "Cross Validation" para correr el modelo varias veces mejorando un poco la eficiencia de este modelo.</p>
+    <img src="imagenes/proyecto_KNN/RM_KNN.png" width= 900px height= auto style="display: block;">
+    <h4>Cross Validation del modelo en RapidMiner</h4>
+    <p>En el "Cross Validation" corremos varias veces el algoritmo de KNN como caja negra segido de "Apply model" y "Performance" para medir la precision.</p>
+    <P>Por ultimo sacamos todo hacia afuera para ver los resultados.</P>
+    <img src="imagenes/proyecto_KNN/CV_KNN.png" width= 900px height= auto style="display: block;">
+    <h4>Resultados del modelo de KNN en RapidMiner</h4>
+    <p>Podemos ver en en la 2da columna se encuentra el valor de prediccion correcto y en la 3ra se encuentra la prediccion del modelo.</p>
+    <p>A su vez vemos que la prediccion depende de los coeficientes de que estan en la 4 a 7 columna cada una calcula el coeficiente para cada deporte posible.</p>
+    <p>A partir de la 8 columna estan las caracteristicas de los deportistas.</p>
+    <img src="imagenes/proyecto_KNN/RS_KNN.png" width= 900px height= auto style="display: block;">
+    <h4>Performance del modelo de KNN en RapidMiner</h4>
+    <p>Por lo que vemos la performance es terrible pero hay que considerar que son muchas deportes posibles, la cantidad de datos es poca y aun con todas las mejoras las prediciones no son buenas.</p>
+    <p>Para mejorarlo habria que poner muchos mas datos para ajustar el modelo, a la par hay que mejorar la preparacion de los datos seleccionando las caracteristias mas significativas y quitando mas outliers.</p>
+    <img src="imagenes/proyecto_KNN/PF_KNN.png" width= 900px height= auto style="display: block;">
     <button onclick="window.location.href='index.html#KNN';" style="display: block; margin-top: 1rem;">Section de KNN</button>
 </section>
 
